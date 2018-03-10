@@ -5,7 +5,7 @@ const names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 
 const greetings = ['hi', 'hello', 'hey', 'yo', 'greetings']
 
 client.on('message', message => {
-    if (message.content === "hi") {
+    if (names.includes(message.content)) {
         message.channel.send('Hello ' + message.author.username + '.');
     }
 });
