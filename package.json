@@ -1,5 +1,5 @@
 {
-  "name": "Maid John",
+  "name": "Maid-John",
   "description": "",
   "version": "1.0.0",
   "main": "bot.js",
@@ -7,7 +7,7 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "discord.js": "11.1.0",
+    "discord.js": "*",
     "request": "2.81.0"
   }
 }
