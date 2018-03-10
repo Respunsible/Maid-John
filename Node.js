@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-var message1 = nil
+var message1 = ''
 
 const greetings = ['hi', 'hello', 'hey', 'yo', 'greetings'];
 const names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone'];
