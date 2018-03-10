@@ -5,7 +5,7 @@ const names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 
 const greetings = ['hi', 'hello', 'hey', 'yo', 'greetings']
 
 client.on('message', message => {
-    if (greetings.include(message.content.toLowerCase())) {
+    if (message.content === "hi") {
         message.channel.send('Hello ' + message.author.username + '.');
     }
 });
