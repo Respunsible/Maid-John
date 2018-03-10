@@ -6,10 +6,10 @@ var message1 = nil
 const greetings = ['hi', 'hello', 'hey', 'yo', 'greetings'];
 const names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone'];
 
-const isIncludes = (message, arr) => {
+const isIncludes = (msg, arr) => {
   for (let i in arr) {
-    if (message.includes(arr[i])) {
-      return true;
+    if (msg.includes(arr[i])) {
+      return true
     }
   }
   return false;
