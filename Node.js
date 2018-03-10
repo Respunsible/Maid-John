@@ -14,7 +14,7 @@ const includes = (message, arr) => {
 }
 
 client.on('ready', () => {
-    message.channel.send('Level up!');
+	ready.channel.send('Level up!');
 });
 
 client.on('message', message => {
