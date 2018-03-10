@@ -7,15 +7,11 @@ const names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 
 const includes = (message, arr) => {
 	for (let i in arr) {
 		if (message.includes(arr[i])) {
-			return true
+			return true;
 		}
 	}
 	return false;
 }
-
-client.on('ready', () => {
-	ready.channel.send('Level up!');
-});
 
 client.on('message', message => {
 	if (includes(message.content[0], greetings) && includes(message.content[0], names)) {
