@@ -3,8 +3,8 @@ const client = new Discord.Client();
 
 client.on('message', message => {
     if (message.content === 'hi') {
-    	message.reply('hello');
+    	message.createMessage('hello');
   	}
 });
 
-client.login(process.env.TOKEN);
+client.login(process.env.token);
