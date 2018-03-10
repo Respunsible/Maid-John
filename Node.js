@@ -13,6 +13,10 @@ const includes = (message, arr) => {
 	return false;
 }
 
+client.on('ready', () => {
+    message.channel.send('Level up!');
+});
+
 client.on('message', message => {
 	if (includes(message.content[0], greetings) && includes(message.content[0], names)) {
 		message.channel.send('Hello ' + message.author.username + '.');
