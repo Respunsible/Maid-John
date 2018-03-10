@@ -1,5 +1,4 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new require('discord.js').Client();
 
 client.on('ready', () => {
     console.log('I am ready!');
