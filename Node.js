@@ -3,8 +3,8 @@ const client = new Discord.Client();
 
 client.on('message', message => {
     if (message.content.toLowerCase() === 'hi') {
-    	message.reply('hello');
-  	}
+        message.channel.send('hello');
+    }
 });
 
 client.login(process.env.token);
