@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('message', message => {
     if (message.content === 'hi') {
-    	message.channel.send('hello');
+    	message.reply('hello');
   	}
 });
 
