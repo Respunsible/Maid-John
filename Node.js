@@ -16,10 +16,9 @@ const isIncludes = (msg, arr) => {
 client.on('message', message => {
   if (message.content === 'Test') {
     message.channel.send('Hello ' + message.author.username + '.');
-    message.channel.send('Test #2')
+    message.channel.send('Test #3')
   }
-  var message1 = [String(message.content)]
-  if (isIncludes(message1[0], greetings) && isIncludes(message1[0], names)) {
+  if (isIncludes([message.content][0], greetings) && isIncludes([message.content][0], names)) {
     message.channel.send('Hi')
   }
 });
