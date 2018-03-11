@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const greetings = ['hi', 'hello', 'hey', 'yo', 'greetings'];
-const names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids'];
-const what = ['what', 'wat', 'wut'];
-const version = ['version', 'ver', 'ver.'];
+var greetings = ['hi', 'hello', 'hey', 'yo', 'greetings'];
+var names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids'];
+var whats = ['what', 'wat', 'wut'];
+var versions = ['version', 'ver', 'ver.'];
 
 const includes = (message, arr) => {
   for (let i in arr) {
@@ -15,17 +15,16 @@ const includes = (message, arr) => {
   return false;
 }
 
-function what2() {
-  what.some(element => message.content.includes(element))
-}
-
-function version2() {
-  version.some(element => message.content.includes(element))
-}
+//function version2() {
+  //version.some(element => message.content.includes(element))
+//}
 
 client.on('message', message => {
-  if (what2() && version2()) {
-    message.channel.send('I\'m version 0.0.4');
+  //what
+  const includeswhat = whats.some(what => message.content.includes(what))
+  
+  if (includeswhat) {
+    message.channel.send('I\'m version 0.0.3');
   }
   if (includes([message.content][0], greetings) && includes([message.content][0], names)) {
     message.channel.send('Hello ' + message.author.username + '.');
