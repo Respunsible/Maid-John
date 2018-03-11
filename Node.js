@@ -14,7 +14,6 @@ const includes = (message, arr) => {
 }
 
 client.on('message', message => {
-  message = message.content.toLowerCase();
   if (message.content.includes('what version are you') && includes([message.content][0], names) &&) {
     message.channel.send('I\'m version 0.0.2')
   }
