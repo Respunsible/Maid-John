@@ -15,11 +15,11 @@ const isIncludes = (msg, arr) => {
 
 client.on('message', message => {
   if (message.content === 'Test') {
-    message.channel.send('Quiz');
+    message.channel.send('Hello ' + message.author.username + '.');
   }
   var message1 = message.content
   if (isIncludes(message1[0], greetings) && isIncludes(message1[0], names)) {
-    message.channel.send('Hello ' + message.author.username + '.');
+    message.channel.send('Hi')
   }
 });
 
