@@ -15,9 +15,17 @@ const includes = (message, arr) => {
   return false;
 }
 
+function what2() {
+  what.some(element => message.content.includes(element))
+}
+
+function version2() {
+  version.some(element => message.content.includes(element))
+}
+
 client.on('message', message => {
-  if (what.some(element => message.content.includes(element)) && version.some(element => message.content.includes(element))) {
-    message.channel.send('I\'m version 0.0.5');
+  if (what2() && version2()) {
+    message.channel.send('I\'m version 0.0.4');
   }
   if (includes([message.content][0], greetings) && includes([message.content][0], names)) {
     message.channel.send('Hello ' + message.author.username + '.');
