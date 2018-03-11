@@ -15,15 +15,11 @@ const includes = (message, arr) => {
   return false;
 }
 
-//function version2() {
-  //version.some(element => message.content.includes(element))
-//}
-
 client.on('message', message => {
   //what
   const includeswhat = whats.some(what => message.content.includes(what))
   
-  if (includeswhat) {
+  if ('wat' + 'ver') {
     message.channel.send('I\'m version 0.0.3');
   }
   if (includes([message.content][0], greetings) && includes([message.content][0], names)) {
