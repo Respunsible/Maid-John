@@ -14,10 +14,10 @@ const includes = (message, arr) => {
 }
 
 client.on('message', message => {
-  if (message.content.includes('what version are you') && includes([message.content], names)) {
-    message.channel.send('I\'m version 0.0.3')
+  if (message.content.includes('what version are you' + ' lol') && includes([message.content][0], names)) {
+    message.channel.send('I\'m version 0.0.4')
   }
-  if (includes([message.content], greetings) && includes([message.content], names)) {
+  if (includes([message.content][0], greetings) && includes([message.content][0], names)) {
     message.channel.send('Hello ' + message.author.username + '.');
   }
 });
