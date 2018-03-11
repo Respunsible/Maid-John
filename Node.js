@@ -16,7 +16,7 @@ const includes = (message, arr) => {
 }
 
 client.on('message', message => {
-  if (what.some(item => message.content.includes(`${item}`)) {
+  if (what.some(item => message.content.includes(`${item} version`)) {
     message.channel.send('I\'m version 0.0.4')
   }
   if (includes([message.content][0], greetings) && includes([message.content][0], names)) {
