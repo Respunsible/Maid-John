@@ -14,12 +14,12 @@ const isIncludes = (msg, arr) => {
 }
 
 client.on('message', message => {
-  if (message.content === 'Test') {
-    message.channel.send('Hello ' + message.author.username + '.');
-    message.channel.send('Test #3')
+  message.content.toLowerCase();
+  if (isIncludes([message.content][0], names) && message.content.includes('what is version are you')) {
+    message.channel.send('I\'m version 0.0.1')
   }
   if (isIncludes([message.content][0], greetings) && isIncludes([message.content][0], names)) {
-    message.channel.send('Hi')
+    message.channel.send('Hello ' + message.author.username + '.');
   }
 });
 
