@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const greetings = ['hi', 'hello', 'hey', 'yo', 'greetings'];
 const names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids'];
 
-const includes = (message, arr) => {
+const Includes = (message, arr) => {
   for (let i in arr) {
     if (message.includes(arr[i])) {
       return true;
@@ -14,10 +14,10 @@ const includes = (message, arr) => {
 }
 
 client.on('message', message => {
-  if (message.content.includes('what version are you') && includes([message.content][0], names) &&) {
+  if (message.content.includes('what version are you') && Includes([message.content][0], names) &&) {
     message.channel.send('I\'m version 0.0.2')
   }
-  if (includes([message.content][0], greetings) && includes([message.content][0], names)) {
+  if (Includes([message.content][0], greetings) && Includes([message.content][0], names)) {
     message.channel.send('Hello ' + message.author.username + '.');
   }
 });
