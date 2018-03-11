@@ -14,12 +14,17 @@ const includes = (message, arr) => {
   return false;
 }
 
+//client.on('ready', () => {
+    //client.channels.get('my-unique-channel-id').send('I\'m version 0.0.3')
+//});
+
 client.on('message', message => {
   if (what.some(item => message.content.includes(`${item} version are you`))) {
     message.channel.send('I\'m version 0.0.3')
   }
   if (includes([message.content][0], greetings) && includes([message.content][0], names)) {
     message.channel.send('Hello ' + message.author.username + '.');
+    client.user.setStatus("dnd");
   }
 });
 
