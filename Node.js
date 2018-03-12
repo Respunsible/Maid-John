@@ -27,7 +27,6 @@ client.on('message', message => {
     message.channel.send(maid_johns_his[Math.floor(Math.random() * maid_johns_his.length)]);
   } else if (message.isMentioned(client.user) && his.some(hi => message.content.includes(hi))) {
      message.reply(maid_johns_his[Math.floor(Math.random() * maid_johns_his.length)]);
-    message.channel.send(message.content);
   }
 });
 
