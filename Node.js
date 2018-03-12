@@ -14,8 +14,8 @@ client.on('message', message => {
   //Converts message content to lowercase.
   message.content = message.content.toLowerCase();
   //If message content = 'What version are you?'
-  if (RegExp('(' + what + ')\\s+(' + version + ')\\s+(' + are + ')\\s+(' + you + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
-    message.channel.send('I\'m version 0.0.2');
+  if (RegExp('^.*(' + what + ')\\s+(' + version + ')\\s+(' + are + ')\\s+(' + you + ').*$').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
+    message.channel.send('I\'m version 0.0.1');
   }
 });
 
