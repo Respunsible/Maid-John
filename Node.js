@@ -18,7 +18,7 @@ client.on('message', message => {
   
   if (RegExp('(' + what.join("|") + ')\\s+(' + version.join("|") + ')\\s+(' + are.join("|") + ')\\s+(' + you.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name)) || RegExp('(' + what.join("|") + ')\\s+(' + 'is' + ')\\s+(' + your.join("|") + ')\\s+(' + version.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
     message.channel.send(maid_johns_version);
-  } else if (message.isMentioned(client.user)) {
+  } else if (message.isMentioned(client.user) && RegExp('(' + what.join("|") + ')\\s+(' + version.join("|") + ')\\s+(' + are.join("|") + ')\\s+(' + you.join("|") + ')').test(message.content) || RegExp('(' + what.join("|") + ')\\s+(' + 'is' + ')\\s+(' + your.join("|") + ')\\s+(' + version.join("|") + ')').test(message.content)) {
     message.reply('Yes?');
   }
 });
