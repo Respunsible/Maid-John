@@ -23,8 +23,8 @@ client.on('message', message => {
     message.reply(maid_johns_version);
   }
   
-  if (RegExp('(' + hi.join("|") + ')\\s+(' + maid_johns_names.join("|")').test(message.content)) {
-    message.channel.send('hi');
+  if (RegExp('(' + hi.join("|") + ')\\s+(' + maid_johns_names.join("|")').test(message.content))) {
+    message.channel.send(maid_johns_hi[Math.floor(Math.random() * maid_johns_hi.length)]);
   }
 });
 
