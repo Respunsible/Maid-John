@@ -24,7 +24,7 @@ client.on('message', message => {
   }
   
   if (RegExp('(' + hi.join("|") + ')\\s+(' + maid_johns_names.join("|")').test(message.content)) {
-    message.channel.send(maid_johns_hi[Math.floor(Math.random() * maid_johns_hi.length)]);
+    message.channel.send('hi');
   }
 });
 
