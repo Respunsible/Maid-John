@@ -46,7 +46,7 @@ client.on('message', message => {
      message.reply(maid_johns_byes[Math.floor(Math.random() * maid_johns_byes.length)]);
   }
   
-  if (message.author.username === john && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + you.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
+  if (message.author.id === 215956987815526400 && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + you.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
       message.channel.send('I love you too, but you\'re too much for me.');
   }
 });
