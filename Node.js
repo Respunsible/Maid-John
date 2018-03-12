@@ -14,7 +14,7 @@ const client = new Discord.Client();
 
 client.on('message', message => {
   //Converts message content to lowercase.
-  message.content = message.content.toLowerCase();
+  message.content = message.content.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, ' ').toLowerCase();
   
   //Maid John's version
   if (RegExp('(' + whats.join("|") + ')\\s+(' + versions.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name)) || RegExp('(' + whats.join("|") + ')\\s+(' + 'is' + ')\\s+(' + yours.join("|") + ')\\s+(' + versions.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
@@ -25,7 +25,7 @@ client.on('message', message => {
   
   if (RegExp('(' + his.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content)) {
     message.channel.send(maid_johns_his[Math.floor(Math.random() * maid_johns_his.length)]);
-  } else if (message.isMentioned(client.user) && his.some(hi => message.content.includes(hi))) {
+  } else if (message.isMentioned(client.user) && RegExp('(' + his.join("|") + ')').test(message.content)) {
      message.reply(maid_johns_his[Math.floor(Math.random() * maid_johns_his.length)]);
   }
 });
