@@ -47,7 +47,7 @@ client.on('message', message => {
   }
   
   if (message.author.id === 215956987815526400 && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + you.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
-      message.channel.send('I love you too, but you\'re too much for me.');
+      message.channel.send('I still love you too, but you\'re too much for me.');
   }
 });
 
