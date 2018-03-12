@@ -1,7 +1,7 @@
 var maid_johns_byes = ['Bye.', 'Take care.']
 var maid_johns_his = ['Hi.', 'Hello.']
 var maid_johns_names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
-var maid_johns_version = '0.0.2';
+var maid_johns_version = '0.0.3';
 
 var john = 'd to the e to the d'
 
