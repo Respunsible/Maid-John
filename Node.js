@@ -1,6 +1,6 @@
 var maid_johns_his = ['Hi', 'Hello']
 var maid_johns_names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
-var maid_johns_version = '0.0.1';
+var maid_johns_version = '0.0.2';
 
 var ares = ['are', 'r'];
 var his = ['hi', 'hello', 'hey', 'hai'];
@@ -25,7 +25,7 @@ client.on('message', message => {
   
   if (RegExp('(' + his.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content)) {
     message.channel.send(maid_johns_his[Math.floor(Math.random() * maid_johns_his.length)]);
-  } else if (message.isMentioned(client.user) && RegExp('(' + his.join("|") + ')').test(message.content)) {
+  } else if (message.isMentioned(client.user) && second_word.includes(message.content.split(' ')[1])) {
      message.reply(maid_johns_his[Math.floor(Math.random() * maid_johns_his.length)]);
   }
 });
