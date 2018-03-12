@@ -9,11 +9,9 @@ var whats = ['what', 'wat', 'wut'];
 var yous = ['you', 'u'];
 
 client.on('message', message => {
-  //const message_includes_name = names.some(name => message.content.includes(name))
-  //const message_includes_version = versions.some(version => message.content.includes(version))
-  //const message_includes_what = whats.some(what => message.content.includes(what))
-  
-  if(whats.includes(message.content.split(' ')[0]) && versions.includes(message.content.split(' ')[1]) && ares.includes(message.content.split(' ')[2]) && yous.includes(message.content.split(' ')[3]) && names.some(name => message.content.includes(name))) {
+  message.content = message.content.toLowerCase();
+  //'What version are you?'
+  if (whats.includes(message.content.split(' ')[0]) && versions.includes(message.content.split(' ')[1]) && ares.includes(message.content.split(' ')[2]) && yous.includes(message.content.split(' ')[3]) && names.some(name => message.content.includes(name))) {
     message.channel.send('I\'m version 0.0.1');
   }
 });
