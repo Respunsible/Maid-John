@@ -18,6 +18,7 @@ client.on('message', message => {
   
   if (RegExp('(' + what + ')\\s+(' + version + ')\\s+(' + are + ')\\s+(' + you + ')').test(message.content) || RegExp('(' + what + ')\\s+(' + 'is' + ')\\s+(' + your + ')\\s+(' + version + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
     message.channel.send(maid_johns_version);
+  }
 });
 
 client.login(process.env.token);
