@@ -8,6 +8,7 @@ var john = 'd to the e to the d'
 var ares = ['are', 'r'];
 var byes = ['bye', 'goodbye', 'see ya', 'cya', 'see you']
 var his = ['hi', 'hello', 'hey', 'hai', 'yo'];
+var kys = ['kys', 'kill yourself']
 var loves = ['love', 'luv']
 var versions = ['version', 'ver', 'ver.'];
 var whats = ['what', 'wat', 'wut'];
@@ -44,6 +45,11 @@ client.on('message', message => {
     message.channel.send(maid_johns_byes2[Math.floor(Math.random() * maid_johns_byes2.length)]);
   } else if (message.isMentioned(client.user) && RegExp('(' + byes.join("|") + ')').test(message.content)) {
      message.reply(maid_johns_byes[Math.floor(Math.random() * maid_johns_byes.length)]);
+  }
+  
+  //KYS
+  if (RegExp('(' + kys.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + kys.join("|") + ')').test(message.content)) {
+    message.channel.send('I will not.');
   }
   
   if (message.author.id === '215956987815526400' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + you.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
