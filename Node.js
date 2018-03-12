@@ -1,4 +1,3 @@
-var maid_johns_his = ['Hi', 'Hello', 'Hi' + ' ' + message.author.username, 'Hello' + ' ' + message.author.username]
 var maid_johns_names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
 var maid_johns_version = '0.0.2';
 
@@ -13,6 +12,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('message', message => {
+  
+  var maid_johns_his = ['Hi', 'Hello', 'Hi' + ' ' + message.author.username, 'Hello' + ' ' + message.author.username]
+  
   //Converts message content to lowercase.
   message.content = message.content.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, ' ').toLowerCase();
   
