@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 var ares = ['are', 'r'];
 var greetings = ['hi', 'hello', 'hey', 'yo', 'greetings'];
-var names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids'];
+var names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
 var versions = ['version', 'ver', 'ver.'];
 var whats = ['what', 'wat', 'wut'];
 var yous = ['you', 'u'];
