@@ -1,17 +1,20 @@
+var maid_johns_names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
+
+//Dictionary
+var are = ['are', 'r'];
+var hi = ['hi', 'hello', 'hey', 'hai'];
+var version = ['version', 'ver', 'ver.'];
+var what = ['what', 'wat', 'wut'];
+var you = ['you', 'u'];
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-var ares = ['are', 'r'];
-var greetings = ['hi', 'hello', 'hey', 'yo', 'greetings'];
-var names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
-var versions = ['version', 'ver', 'ver.'];
-var whats = ['what', 'wat', 'wut'];
-var yous = ['you', 'u'];
-
 client.on('message', message => {
+  //Converts message content to lowercase.
   message.content = message.content.toLowerCase();
-  //'What version are you?'
-  if (whats.includes(message.content.split(' ')[0]) && versions.includes(message.content.split(' ')[1]) && ares.includes(message.content.split(' ')[2]) && yous.includes(message.content.split(' ')[3]) && names.some(name => message.content.includes(name))) {
+  //If message content = 'What version are you?'
+  if (what.includes(message.content.split(' ')[0]) && version.includes(message.content.split(' ')[1]) && are.includes(message.content.split(' ')[2]) && you.includes(message.content.split(' ')[3]) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
     message.channel.send('I\'m version 0.0.1');
   }
 });
