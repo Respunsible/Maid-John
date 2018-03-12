@@ -1,8 +1,9 @@
+var maid_johns_his2 = ['Hi', 'Hello']
 var maid_johns_names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
 var maid_johns_version = '0.0.2';
 
 var ares = ['are', 'r'];
-var his = ['hi', 'hello', 'hey', 'hai'];
+var his = ['hi', 'hello', 'hey', 'hai', 'yo'];
 var versions = ['version', 'ver', 'ver.'];
 var whats = ['what', 'wat', 'wut'];
 var yous = ['you', 'u'];
@@ -13,7 +14,7 @@ const client = new Discord.Client();
 
 client.on('message', message => {
   
-  var maid_johns_his = ['Hi', 'Hello', 'Hi' + ' ' + message.author.username, 'Hello' + ' ' + message.author.username]
+  var maid_johns_his2 = ['Hi', 'Hello', 'Hi' + ' ' + message.author.username, 'Hello' + ' ' + message.author.username]
   
   //Converts message content to lowercase.
   message.content = message.content.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, ' ').toLowerCase();
@@ -26,8 +27,8 @@ client.on('message', message => {
   }
   
   if (RegExp('(' + his.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content)) {
-    message.channel.send(maid_johns_his[Math.floor(Math.random() * maid_johns_his.length)]);
-  } else if (message.isMentioned(client.user) && his.includes(message.content.split(' ')[1])) {
+    message.channel.send(maid_johns_his2[Math.floor(Math.random() * maid_johns_his2.length)]);
+  } else if (message.isMentioned(client.user) && his.includes(message.content.split(' ')[0])) {
      message.reply(maid_johns_his[Math.floor(Math.random() * maid_johns_his.length)]);
   }
 });
