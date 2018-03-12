@@ -19,6 +19,7 @@ const client = new Discord.Client();
 
 client.on('message', message => {
   
+  var maid_johns_byes2 = ['Bye.', 'Take care.', 'Bye' + ' ' + message.author.username + '.', 'Take care' + ' ' + message.author.username + '.']
   var maid_johns_his2 = ['Hi', 'Hello', 'Hi' + ' ' + message.author.username + '.', 'Hello' + ' ' + message.author.username + '.']
   
   //Lowercase
