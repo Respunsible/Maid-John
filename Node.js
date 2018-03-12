@@ -31,7 +31,7 @@ client.on('message', message => {
   
   if (RegExp('(' + his.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content)) {
     message.channel.send(maid_johns_his2[Math.floor(Math.random() * maid_johns_his2.length)]);
-  } else if (message.isMentioned(client.user) && his.includes(message.content.split(' ')[3])) {
+  } else if (message.isMentioned(client.user) && RegExp('(' + his.join("|") + ')').test(message.content)) {
      message.reply(maid_johns_his[Math.floor(Math.random() * maid_johns_his.length)]);
   }
   
