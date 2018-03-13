@@ -59,7 +59,7 @@ client.on('message', message => {
     }
   }
   
-  if (message.author.id === '421826061102481408' && message.content === 'Dab. I win.') {
+  if (message.author.id === '421826061102481408' && message.content === 'dab. i win.') {
     message.channel.send({file: 'https://media.giphy.com/media/cIsQAFqIjGv1OFsTBh/giphy.gif'})
   }
   
