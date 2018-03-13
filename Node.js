@@ -53,7 +53,7 @@ client.on('message', message => {
   }
   
   //Rock-paper-scissors
-  if (message.content === 'rock' && message.author.id !== '423186959712780298' || message.content === 'paper' || message.content === 'scissors' || message.content === ':fist:' || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
+  if (message.content === 'rock' && message.author.id !== '423186959712780298' || message.content === 'paper' && message.author.id !== '423186959712780298' || message.content === 'scissors' && message.author.id !== '423186959712780298' || message.content === ':fist:' && message.author.id !== '423186959712780298' && message.author.id !== '423186959712780298' || message.content === ':hand_splayed:' && message.author.id !== '423186959712780298' || message.content === ':v:' && message.author.id !== '423186959712780298' || message.content === ':scissors:' && message.author.id !== '423186959712780298') {
     message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
   }
   
