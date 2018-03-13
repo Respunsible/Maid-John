@@ -24,7 +24,7 @@ client.on('message', message => {
   //Converts to lowercase
   message.content = message.content.toLowerCase();
   //Replaces special characters
-  message.content = message.content.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, ' ')
+  message.content = message.content.replace(/[!"#$%&'()*+,-./:;<=>?@\^_`{|}~]/g, ' ')
   
   //maid_johns_version
   if (RegExp('(' + whats.join("|") + ')\\s+(' + versions.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name)) || RegExp('(' + whats.join("|") + ')\\s+(' + 'is' + ')\\s+(' + yours.join("|") + ')\\s+(' + versions.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
