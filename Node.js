@@ -13,7 +13,7 @@ var whats = ['what', 'wat', 'wut'];
 var yous = ['you', 'u'];
 var yours = ['your', 'ur'];
 
-const rock_paper_scissors = [':fist:', ':hand_splayed:', ':v:']
+const rock_paper_scissors = [':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':scissors:', '']
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -53,8 +53,10 @@ client.on('message', message => {
   }
   
   //Rock-paper-scissors
-  if (message.content === 'rock' && message.author.id !== '423186959712780298' || message.content === 'paper' && message.author.id !== '423186959712780298' || message.content === 'scissors' && message.author.id !== '423186959712780298' || message.content === ':fist:' && message.author.id !== '423186959712780298' && message.author.id !== '423186959712780298' || message.content === ':hand_splayed:' && message.author.id !== '423186959712780298' || message.content === ':v:' && message.author.id !== '423186959712780298' || message.content === ':scissors:' && message.author.id !== '423186959712780298') {
-    message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
+  if (message.author.id !== '423186959712780298') {
+    if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content === ':fist:' || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
+      message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
+    }
   }
   
   if (message.author.id === '215956987815526400' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
