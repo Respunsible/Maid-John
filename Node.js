@@ -13,7 +13,7 @@ var whats = ['what', 'wat', 'wut'];
 var yous = ['you', 'u'];
 var yours = ['your', 'ur'];
 
-const rock_paper_scissors = [':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':scissors:', ':fist:', ':hand_splayed:', ':scissors:', {file: 'https://media.giphy.com/media/cIsQAFqIjGv1OFsTBh/giphy.gif'}];
+const rock_paper_scissors = [':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':scissors:', ':fist:', ':hand_splayed:', ':scissors:', 'Dab. I win.'];
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -54,9 +54,13 @@ client.on('message', message => {
   
   //Rock-paper-scissors
   if (message.author.id !== '421826061102481408') {
-    if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content.includes('140579c129c16668c3b91718fe747a75')) {
+    if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors') {
       message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
     }
+  }
+  
+  if (message.author.id === '421826061102481408' && message.content === 'Dab. I win.') {
+    message.channel.send({file: 'https://media.giphy.com/media/cIsQAFqIjGv1OFsTBh/giphy.gif'})
   }
   
   if (message.author.id === '215956987815526400' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
