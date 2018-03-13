@@ -53,9 +53,9 @@ client.on('message', message => {
   }
   
   //Rock-paper-scissors
-  //if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content === ':fist:' || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
-    //message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
-  //}
+  if (message.content === 'rock' && message.author.id !== '423186959712780298' || message.content === 'paper' || message.content === 'scissors' || message.content === ':fist:' || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
+    message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
+  }
   
   if (message.author.id === '215956987815526400' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
       //message.channel.send('I love you too, John.');
