@@ -49,6 +49,10 @@ client.on('message', message => {
   if (RegExp('(' + kys.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + kys.join("|") + ')').test(message.content)) {
     message.channel.send('I will not.');
   }
+  
+  if (message.author.id === '215956987815526400' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
+      message.channel.send('I love you too.');
+  }
 });
 
 client.login(process.env.token);
