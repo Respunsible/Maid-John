@@ -14,10 +14,10 @@ var yous = ['you', 'u'];
 var yours = ['your', 'ur'];
 
 const rock_paper_scissors = [':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':scissors:', ':fist:', ':hand_splayed:', ':scissors:', 'Dab. I win.'];
-var win_rate = 0
-var wins = 0
-var loses = 0
-var ties = 0
+var win_rate = 0;
+var wins = 0;
+var loses = 0;
+var ties = 0;
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
