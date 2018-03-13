@@ -13,6 +13,8 @@ var whats = ['what', 'wat', 'wut'];
 var yous = ['you', 'u'];
 var yours = ['your', 'ur'];
 
+const rock_paper_scissors = [':fist:', ':hand_splayed:', ':v:']
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -48,6 +50,11 @@ client.on('message', message => {
    //'I will not'
   if (RegExp('(' + kys.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + kys.join("|") + ')').test(message.content)) {
     message.channel.send('I will not.');
+  }
+  
+  //Rock-paper-scissors
+  if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content === ':fist:' || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
+    message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
   }
   
   if (message.author.id === '215956987815526400' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
