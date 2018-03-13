@@ -88,9 +88,8 @@ client.on('message', message => {
       } else {
         wins = wins + 1;
       }
-      win_rate = Number((wins / (wins + loses) * 100, 2).toFixed(2));
-      message.channel.send('I now have ' + wins + ' win(s), ' + ties + ' tie(s), and ' + loses + ' lose(s),');
-      message.channel.send('making my win rate ' + win_rate + '%');
+      win_rate = Number((wins / (wins + loses) * 100).toFixed(2));
+      message.channel.send('My win rate is now ' + win_rate + '%');
     }
   }
   
