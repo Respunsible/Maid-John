@@ -54,7 +54,7 @@ client.on('message', message => {
   
   //Rock-paper-scissors
   if (message.author.id !== '421826061102481408') {
-    if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content.includes(':fist:') || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
+    if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content.includes('fist') || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
       message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
     }
   }
