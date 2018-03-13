@@ -44,6 +44,11 @@ client.on('message', message => {
   } else if (message.isMentioned(client.user) && RegExp('(' + byes.join("|") + ')').test(message.content)) {
      message.reply(maid_johns_byes[Math.floor(Math.random() * maid_johns_byes.length)]);
   }
+  
+   //'I will not'
+  if (RegExp('(' + kys.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + kys.join("|") + ')').test(message.content)) {
+    message.channel.send('I will not.');
+  }
 });
 
 client.login(process.env.token);
