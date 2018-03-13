@@ -57,9 +57,9 @@ client.on('message', message => {
     message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
   }
   
-  if (message.author.id === '215956987815526400' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
-      message.channel.send('I love you too, John.');
-  }
+  //if (message.author.id === '215956987815526400' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
+      //message.channel.send('I love you too, John.');
+  //}
 });
 
 client.login(process.env.token);
