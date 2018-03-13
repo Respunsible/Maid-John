@@ -52,7 +52,7 @@ client.on('message', message => {
     message.channel.send('I will not.');
   }
   
-  if (message.author.id === '418108591468314644' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + you.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
+  if (RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + you.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
       message.channel.send('I still love you too.');
   }
 });
