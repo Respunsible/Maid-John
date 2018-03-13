@@ -21,7 +21,7 @@ const client = new Discord.Client();
 client.on('message', message => {
   
   var maid_johns_byes2 = ['Bye.', 'Take care.', 'Bye' + ' ' + message.author.username + '.', 'Take care' + ' ' + message.author.username + '.'];
-  var maid_johns_his2 = ['Hi', 'Hello', 'Hi' + ' ' + message.author.username + '.', 'Hello' + ' ' + message.author.username + '.'];
+  var maid_johns_his2 = ['Hi.', 'Hello.', 'Hi' + ' ' + message.author.username + '.', 'Hello' + ' ' + message.author.username + '.'];
   
   //Converts to lowercase
   message.content = message.content.toLowerCase();
@@ -54,7 +54,7 @@ client.on('message', message => {
   
   //Rock-paper-scissors
   if (message.author.id !== '421826061102481408') {
-    if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content === ':fist:' || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
+    if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content === 'https://discordapp.com/assets/af184eec103ade6eab147ebab9ad651e.svg' || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
       message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
     }
   }
