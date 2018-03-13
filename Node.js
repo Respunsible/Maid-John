@@ -1,7 +1,7 @@
 var maid_johns_byes = ['Bye.', 'Take care.'];
 var maid_johns_his = ['Hi.', 'Hello.'];
 var maid_johns_names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
-var maid_johns_version = '0.0.3';
+var maid_johns_version = '0.0.4';
 
 var ares = ['are', 'r'];
 var byes = ['bye', 'goodbye', 'see ya', 'cya', 'see you'];
@@ -54,7 +54,7 @@ client.on('message', message => {
   
   //Rock-paper-scissors
   if (message.author.id !== '421826061102481408') {
-    if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content.includes('fist') || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:') {
+    if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors' || message.content.includes(':fist:') || message.content === ':hand_splayed:' || message.content === ':v:' || message.content === ':scissors:, 140579c129c16668c3b91718fe747a75') {
       message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
     }
   }
