@@ -14,6 +14,10 @@ var yous = ['you', 'u'];
 var yours = ['your', 'ur'];
 
 const rock_paper_scissors = [':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':v:', ':fist:', ':hand_splayed:', ':scissors:', ':fist:', ':hand_splayed:', ':scissors:', 'Dab. I win.'];
+var win_rate = 0
+var wins = 0
+var loses = 0
+var ties = 0
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -55,7 +59,38 @@ client.on('message', message => {
   //Rock-paper-scissors
   if (message.author.id !== '421826061102481408') {
     if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors') {
-      message.channel.send(rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]);
+      var rock_paper_scissors_dab = rock_paper_scissors[Math.floor(Math.random() * rock_paper_scissors.length)]
+      message.channel.send(rock_paper_scissors_dab);
+      if (message.content === 'rock' && rock_paper_scissors_dab === ':fist:') {
+        ties = ties + 1
+      } else if (message.content === 'rock' && rock_paper_scissors_dab === ':hand_splayed:') {
+        wins = wins + 1
+      } else if (message.content === 'rock' && rock_paper_scissors_dab === ':v:') {
+        loses = loses + 1
+      } else if (message.content === 'paper' && rock_paper_scissors_dab === ':fist:') {
+        loses = loses + 1
+      } else if (message.content === 'paper' && rock_paper_scissors_dab === ':hand_splayed:') {
+        ties = ties + 1
+      } else if (message.content === 'paper' && rock_paper_scissors_dab === ':v:') {
+        wins = wins + 1
+      } else if (message.content === 'scissors' && rock_paper_scissors_dab === ':fist:') {
+        wins = wins + 1
+      } else if (message.content === 'scissors' && rock_paper_scissors_dab === ':hand_splayed:') {
+        loses = loses + 1
+      } else if (message.content === 'scissors' && rock_paper_scissors_dab === ':v:') {
+        ties = ties + 1
+      } else if (message.content === 'rock' && rock_paper_scissors_dab === ':scissors:') {
+        loses = loses + 1
+      } else if (message.content === 'paper' && rock_paper_scissors_dab === ':scissors:') {
+        wins = wins + 1
+      } else if (message.content === 'scissors' && rock_paper_scissors_dab === ':scissors:') {
+        ties = ties + 1
+      } else {
+        wins = wins + 1
+      }
+      win_rate = math.round(wins / (wins + loses) * 100, 2);
+      message.channel.send('I now have ' + wins + ' win(s), ' + ties + ' tie(s), and ' + loses + ' lose(s),');
+      message.channel.send('making my win rate ' + win_rate + '%');
     }
   }
   
