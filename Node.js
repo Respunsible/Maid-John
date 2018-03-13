@@ -1,15 +1,13 @@
-var maid_johns_byes = ['Bye.', 'Take care.']
-var maid_johns_his = ['Hi.', 'Hello.']
+var maid_johns_byes = ['Bye.', 'Take care.'];
+var maid_johns_his = ['Hi.', 'Hello.'];
 var maid_johns_names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
 var maid_johns_version = '0.0.3';
 
-var john = 'd to the e to the d'
-
 var ares = ['are', 'r'];
-var byes = ['bye', 'goodbye', 'see ya', 'cya', 'see you']
+var byes = ['bye', 'goodbye', 'see ya', 'cya', 'see you'];
 var his = ['hi', 'hello', 'hey', 'hai', 'yo'];
-var kys = ['kys', 'kill yourself']
-var loves = ['love', 'luv']
+var kys = ['kys', 'kill yourself'];
+var loves = ['love', 'luv'];
 var versions = ['version', 'ver', 'ver.'];
 var whats = ['what', 'wat', 'wut'];
 var yous = ['you', 'u'];
@@ -20,8 +18,8 @@ const client = new Discord.Client();
 
 client.on('message', message => {
   
-  var maid_johns_byes2 = ['Bye.', 'Take care.', 'Bye' + ' ' + message.author.username + '.', 'Take care' + ' ' + message.author.username + '.']
-  var maid_johns_his2 = ['Hi', 'Hello', 'Hi' + ' ' + message.author.username + '.', 'Hello' + ' ' + message.author.username + '.']
+  var maid_johns_byes2 = ['Bye.', 'Take care.', 'Bye' + ' ' + message.author.username + '.', 'Take care' + ' ' + message.author.username + '.'];
+  var maid_johns_his2 = ['Hi', 'Hello', 'Hi' + ' ' + message.author.username + '.', 'Hello' + ' ' + message.author.username + '.'];
   
   //Converts to lowercase
   message.content = message.content.toLowerCase();
