@@ -59,10 +59,6 @@ client.on('message', message => {
     }
   }
   
-  if (message.author.id === '418108591468314644') {
-    message.channel.send(message.content)
-  }
-  
   if (message.author.id === '215956987815526400' && RegExp('(' + 'i' + ')\\s+(' + loves.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content) && maid_johns_names.some(maid_johns_name => message.content.includes(maid_johns_name))) {
     message.channel.send('I love you too, John.');
   }
