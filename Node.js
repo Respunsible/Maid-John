@@ -8,8 +8,10 @@ var byes = ['bye', 'goodbye', 'see ya', 'cya', 'see you'];
 var his = ['hi', 'hello', 'hey', 'hai'];
 var kys = ['kys', 'kill yourself'];
 var loves = ['love', 'luv'];
+var reallys = ['really', 'rlly'];
 var versions = ['version', 'ver', 'ver.'];
 var whats = ['what', 'wat', 'wut'];
+var whos = ['who'];
 var yous = ['you', 'u'];
 var yours = ['your', 'ur'];
 
@@ -54,6 +56,11 @@ client.on('message', message => {
    //'I will not'
   if (RegExp('(' + kys.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + kys.join("|") + ')').test(message.content)) {
     message.channel.send('I will not.');
+  }
+  
+  //'I am John's waifu.'
+  if (RegExp('(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || (RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + reallys.join("|") + ')').test(message.content) || RegExp('(' + whos.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || (RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + whos.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content)) {
+    message.channel.send('I am John's waifu.');
   }
   
   //Rock-paper-scissors
