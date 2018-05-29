@@ -63,6 +63,11 @@ client.on('message', message => {
     message.channel.send('I am John\'s waifu.');
   }
   
+  // 'I am a maid.'
+  if (RegExp('(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content)) {
+    message.channel.send('I am a maid.');
+  }
+  
   //Rock-paper-scissors
   if (message.author.id !== '421826061102481408') {
     if (message.content === 'rock' || message.content === 'paper' || message.content === 'scissors') {
