@@ -1,7 +1,7 @@
 var maid_johns_byes = ['Bye.', 'Take care.'];
 var maid_johns_his = ['Hi.', 'Hello.'];
 var maid_johns_names = ['maid john', 'best girl', 'best girl john', 'girl john', 'guys', 'everyone', 'girls', 'maids', 'john maid', 'john best girl'];
-var maid_johns_version = '0.0.4';
+var maid_johns_version = '0.0.5';
 
 var ares = ['are', 'r'];
 var byes = ['bye', 'goodbye', 'see ya', 'cya', 'see you'];
@@ -59,8 +59,8 @@ client.on('message', message => {
   }
   
   //'I am John's waifu.'
-  if (RegExp('(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || (RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + reallys.join("|") + ')').test(message.content) || RegExp('(' + whos.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || (RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + whos.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content)) {
-    message.channel.send('I am Johns waifu.');
+  if (RegExp('(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + reallys.join("|") + ')').test(message.content) || RegExp('(' + whos.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + whos.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content)) {
+    message.channel.send('I am John\'s waifu.');
   }
   
   //Rock-paper-scissors
