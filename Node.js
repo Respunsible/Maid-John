@@ -60,7 +60,7 @@ client.on('message', message => {
   
   //'I am John's waifu.'
   if (RegExp('(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || (RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + whos.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + reallys.join("|") + ')').test(message.content) || RegExp('(' + whos.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')\\s+(' + maid_johns_names.join("|") + ')').test(message.content) || (RegExp('(' + maid_johns_names.join("|") + ')\\s+(' + whos.join("|") + ')\\s+(' + reallys.join("|") + ')\\s+(' + ares.join("|") + ')\\s+(' + yous.join("|") + ')').test(message.content)) {
-    message.channel.send('I am John\'s waifu.');
+    message.channel.send('I am Johns waifu.');
   }
   
   //Rock-paper-scissors
